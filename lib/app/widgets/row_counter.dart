@@ -1,11 +1,17 @@
-# multi_counter_explicit_gesture
+import 'package:multi_counter_explicit_gesture/deep_observer/deep_observer.dart';
+import '../controllers/counter_provider.dart';
+import 'icon_button.dart';
+import 'package:flutter/material.dart';
 
-Project where the `DeepObservable` state manager is tested explicitly.
+class MyRowCounter extends StatefulWidget {
+  final int identifier;
 
-- [Deep Observer](https://github.com/carlosparra1998/deep_observer)
+  const MyRowCounter({required this.identifier, super.key});
 
+  @override
+  State<MyRowCounter> createState() => _MyRowCounterState();
+}
 
-```dart
 class _MyRowCounterState extends State<MyRowCounter> {
   @override
   Widget build(BuildContext context) {
@@ -65,4 +71,3 @@ class _MyRowCounterState extends State<MyRowCounter> {
     );
   }
 }
-```
